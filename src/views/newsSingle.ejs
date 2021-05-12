@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Node.js News</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">Node.Js News</div>
+      <%- include('./partials/search.ejs') %>
+    </header>
+
+    <div class="wrapper">
+      <div class="news-single">
+        <a href="/">&larr;- Back</a>
+        <% if(article !=null) { %>
+        <h2><%- article.title.rendered %></h2>
+        <p><%- article.content.rendered %></p>
+        <% } else { %> No posts found. <% } %>
+      </div>
+    </div>
+  </body>
+</html>
